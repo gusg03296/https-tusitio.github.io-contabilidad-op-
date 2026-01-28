@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>CONTABILIDAD OP</title>
+<style>
+body{font-family:Arial;background:#f4f4f4;padding:20px}
+h1{text-align:center}
+input,button{width:100%;padding:10px;margin:5px 0}
+button{background:#2e86de;color:white;border:none}
+li{background:white;margin:5px;padding:10px;border-radius:5px}
+</style>
+</head>
+<body>
+
+<h1>📊 CONTABILIDAD OP</h1>
+<p><b>GUS ESCALONA VALDEZ</b></p>
+
+<input id="nombre" placeholder="Cliente">
+<input id="monto" type="number" placeholder="Monto">
+<button onclick="guardar()">Guardar</button>
+
+<ul id="lista"></ul>
+
+<script>
+function guardar(){
+let n=nombre.value,m=monto.value;
+if(!n||!m){alert("Completa datos");return;}
+lista.innerHTML+=`<li>${n} debe $${m}</li>`;
+nombre.value="";monto.value="";
+}
+</script>
+
+</body>
+</html>
